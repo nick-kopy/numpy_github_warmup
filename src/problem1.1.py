@@ -23,12 +23,17 @@ def border_with_zeros(arr):
         ])
     '''
     # your code here!
-    pass
+    arrx = arr.shape[0] + 2
+    arry = arr.shape[1] + 2
+    arrs = (arrx, arry)
+    output = np.zeros(arrs)
+    output[1:-1, 1:-1] = arr
+    return output
 
 if __name__ == '__main__':
     # Test your code here!
     arr = np.array([
-        [1,1],
-        [1,1]
+        [1,1,1],
+        [1,1,1]
     ])
     print(border_with_zeros(arr))
