@@ -16,7 +16,8 @@ def greater_than_mean(arr):
         np.array([3,4,5])
     '''
     # your code here!
-    pass
+    mask = arr > np.mean(arr)
+    return arr[mask]
 
 if __name__ == '__main__':
     # Test your code here!
